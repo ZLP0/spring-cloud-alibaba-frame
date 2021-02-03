@@ -6,8 +6,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableDiscoveryClient //启动服务发现
-@EnableFeignClients  //启用 openFeign
 @SpringBootApplication
+@EnableFeignClients(basePackages={"com.user.api.fegin"})// 配置 fegin 包路径
 public class ConsumerApplication {
 
     public static void main(String[] args) {

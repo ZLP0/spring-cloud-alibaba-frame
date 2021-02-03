@@ -1,4 +1,4 @@
-package com.provider.controller;
+package com.service.user.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
-public class ProviderController {
+public class UserController {
 
     @RequestMapping(value = "providerSay")
     @ResponseBody
