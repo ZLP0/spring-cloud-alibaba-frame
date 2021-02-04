@@ -19,11 +19,9 @@
     </properties>
 
     <modules>
-        <module>consumer</module>
         <module>config</module>
         <module>cloud-api</module>
         <module>cloud-service</module>
-        <module>cloud-api/cloud-user-api</module>
     </modules>
 
     <dependencyManagement>
