@@ -17,4 +17,19 @@
         <module>cloud-order-service</module>
     </modules>
 
+    <dependencies>
+        <!--引入service jar 依赖-->
+        <dependency>
+            <groupId>com.cloudalibaba.parent</groupId>
+            <artifactId>cloud-service-dependency</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!--引入 工具包依赖 -->
+        <dependency>
+            <groupId>com.cloudalibaba.parent</groupId>
+            <artifactId>cloud-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
 </project>

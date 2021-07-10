@@ -22,6 +22,7 @@
         <module>config</module>
         <module>cloud-api</module>
         <module>cloud-service</module>
+        <module>cloud-util</module>
     </modules>
 
     <dependencyManagement>
