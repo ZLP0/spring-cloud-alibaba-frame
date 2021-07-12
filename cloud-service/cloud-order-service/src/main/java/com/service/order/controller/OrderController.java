@@ -17,6 +17,6 @@ public class OrderController {
 
         String say = userFegin.say();
         System.out.println(say);
-        return "我是一笔订单";
+        return "查询订单";
     }
 }

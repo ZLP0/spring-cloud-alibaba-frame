@@ -16,7 +16,7 @@ public class UserController {
     @RequestMapping(value = "providerSay")
     @ResponseBody
     public String  say(){
-        System.out.println("提供者执行了");
-        return "你好我是提供者";
+        System.out.println("用户服务 say()");
+        return "用户服务 say";
     }
 }
