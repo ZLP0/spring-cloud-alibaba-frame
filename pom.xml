@@ -23,7 +23,30 @@
         <module>cloud-api</module>
         <module>cloud-service</module>
         <module>cloud-util</module>
+        <module>cloud-gateway</module>
+        <module>cloud-gateway/api-gateway</module>
     </modules>
+
+    <dependencies>
+        <!--方便创建javaBean的一些方法-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--测试-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
