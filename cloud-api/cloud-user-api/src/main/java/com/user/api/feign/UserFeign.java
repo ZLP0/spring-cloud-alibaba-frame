@@ -1,12 +1,11 @@
-package com.user.api.fegin;
+package com.user.api.feign;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @FeignClient(value = "user-service")
-public interface UserFegin {
+public interface UserFeign {
 
-    @RequestMapping(value = "providerSay")
+    @RequestMapping(value = "/user/providerSay")
     public String say();
 }
