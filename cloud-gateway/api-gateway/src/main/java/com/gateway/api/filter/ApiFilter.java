@@ -6,6 +6,7 @@ import com.gateway.api.permission.AuthorizationIntterceptor;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
@@ -15,11 +16,10 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import javax.annotation.Resource;
-import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-public class ApiFilter implements GlobalFilter {
+public class ApiFilter implements GlobalFilter , Ordered {
 
     @Resource
     private AuthorizationIntterceptor authorizationIntterceptor;
@@ -65,5 +65,14 @@ public class ApiFilter implements GlobalFilter {
         DataBuffer dataBuffer = exchange.getResponse().bufferFactory().wrap(JSON.toJSONBytes(resultMap));
         return exchange.getResponse().writeWith(Flux.just(dataBuffer));
 
+    }
+
+    /**
+     * 调整过滤器顺序
+     * @return
+     */
+    @Override
+    public int getOrder() {
+        return 10001;
     }
 }
