@@ -24,7 +24,6 @@
         <module>cloud-service</module>
         <module>cloud-util</module>
         <module>cloud-gateway</module>
-        <module>cloud-gateway/api-gateway</module>
     </modules>
 
     <dependencies>
